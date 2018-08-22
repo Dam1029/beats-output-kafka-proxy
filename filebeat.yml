@@ -1,0 +1,17 @@
+filebeat.prospectors:
+- type: log
+  ignore_older: 2h
+  enabled: true
+  paths:
+    - /var/log/*.log
+    - /var/log/syslog
+#output.console:
+#  pretty: true
+output.syslog:
+  host: "127.0.0.1"  # default 127.0.0.1
+  severity: "CRIT"   # default warning
+  facility: "local4" # default local0
+  port: 514          # default 514
+  proto: "udp"       # default udp
+  codec.format:
+    string: 'file:"%{[source]}" message:"%{[message]}"'

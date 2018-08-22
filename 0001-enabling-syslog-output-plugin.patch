@@ -1,0 +1,10 @@
+--- a/libbeat/publisher/includes/includes.go
++++ b/libbeat/publisher/includes/includes.go
+@@ -29,6 +29,7 @@ import (
+ 	_ "github.com/elastic/beats/libbeat/outputs/kafka"
+ 	_ "github.com/elastic/beats/libbeat/outputs/logstash"
+ 	_ "github.com/elastic/beats/libbeat/outputs/redis"
++	_ "github.com/remil1000/beats-output-remote-syslog"
+ 
+ 	// load support output codec
+ 	_ "github.com/elastic/beats/libbeat/outputs/codec/format"
