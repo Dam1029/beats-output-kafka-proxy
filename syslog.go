@@ -49,6 +49,7 @@ type syslogOutput struct {
 
 // makeSyslogout instantiates a new syslog output instance.
 func makeSyslogout(
+	_ outputs.IndexManager,
 	beat beat.Info,
 	observer outputs.Observer,
 	cfg *common.Config,
